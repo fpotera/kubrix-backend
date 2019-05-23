@@ -1,1 +1,1 @@
-# kubrix-backend
+# kubrix-platform
