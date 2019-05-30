@@ -1,0 +1,34 @@
+@startuml
+header kubrix-platform
+footer Page %page% of %lastpage%
+
+title Repository generation
+
+actor User as user
+participant "Kubrix UI" as kui
+participant "Kubrix backend" as kbe
+participant "Jenkins" as jks
+participant "Github" as git
+
+user -> kui: Push button "Generate project"
+kui -> kbe: Start project generation
+
+kbe -> git: Get minimal app
+git -> kbe: minimal app zip
+kbe -> kbe: update minimal app
+kbe -> git: commit/push repo
+
+kbe -> jks: Create project
+kbe -> jks: Create pipeline "generator"
+kbe -> jks: Build pipeline "generator"
+
+jks <-> git: Clone minimal app
+
+jks -> jks: Execute pipeline generator script from repository
+kbe -> jks: Get build status
+jks -> kbe: Status response
+
+kbe -> kui: Project status  
+
+kui -> user: View status
+@enduml
