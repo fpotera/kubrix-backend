@@ -6,7 +6,7 @@ node {
   
   stage('Build') {
     withMaven(maven: 'M3') {
-      sh "pwd"
+      sh "ls"
       sh "mvn clean deploy"
     }
   }
