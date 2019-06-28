@@ -5,7 +5,7 @@ node {
   echo 'kubrix-platform build started...' 
   
   stage('Build') {
-    git url: 
+    git url: "https://github.com/fpotera/kubrix-platform.git"
     
     withMaven(maven: 'M3') {
       sh "ls"
