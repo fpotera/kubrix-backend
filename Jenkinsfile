@@ -1,6 +1,10 @@
 #!/usr/bin/env groovy
 
-node { 
+node {
+  tools {
+    maven 'M3'
+  }
+  
   echo 'kubrix-platform build started...' 
 
   stage('Build') {
