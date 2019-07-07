@@ -1,3 +1,2 @@
 # kubrix-platform
-
-!!!!!!!!
+![PlantUML model](http://www.plantuml.com/plantuml/svg/7Oqnii8m30NxVuhF0HBrLBa9epXAei6MFFBJmF49L3kxpIu37CXM_svgfUOc6VN_1Fgu4mM_vaDnvff3ehX137FnHdjtI30zSmrzJxqoTez69OGXavf2kKwRbsnYOAWRNJOefFlZ49FunRb_vulOTl43) 
