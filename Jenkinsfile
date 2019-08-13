@@ -8,8 +8,9 @@ node {
     git url: "https://github.com/fpotera/kubrix-platform.git"
     
     withMaven(maven: 'M3') {
-      sh "ls"
-      sh "mvn clean deploy"
+      withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
+        sh "mvn clean deploy -Dgithub.global.oauth2Token=$GITHUB_TOKEN"
+      }
     }
   }
 }
