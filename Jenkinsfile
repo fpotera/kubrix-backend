@@ -9,7 +9,7 @@ node {
     
     withMaven(maven: 'M3') {
       withCredentials([string(credentialsId: 'github-token', variable: 'GITHUB_TOKEN')]) {
-        sh "mvn clean deploy -Dgithub.global.oauth2Token=$GITHUB_TOKEN"
+        sh "mvn -Dgithub.global.oauth2Token=$GITHUB_TOKEN clean deploy"
       }
     }
   }
